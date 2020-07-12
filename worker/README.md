@@ -51,6 +51,11 @@ cd yolo
 python train.py --model_config_path ./config/yolov3_custom.cfg --data_config_path ./config/coco_custom.data --class_path ./config/coco_custom.names
 ```
 
+```bash
+cd yolov4
+python train.py -train_label_path ../../data/artifactsv4/train.txt -val_label_path ../../data/artifactsv4/val.txt -dir /Users/jrc/Desktop/Jorge/Otros/Coding/Kipi/kipi/worker/yolov4 -classes 2 -pretrained ./cfg/yolov4.conv.137.pth
+```
+
 change classes in [yolo] (3 times)
 change filters before [yolo] (3 times)
 filters = (classes + 5) x 3
