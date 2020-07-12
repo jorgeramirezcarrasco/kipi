@@ -1,5 +1,6 @@
 venv*
 *.weights
+*.pth
 /data
 .DS_Store
 
@@ -144,4 +145,3 @@ cython_debug/
 
 checkpoints/
 log/
-*.pth
