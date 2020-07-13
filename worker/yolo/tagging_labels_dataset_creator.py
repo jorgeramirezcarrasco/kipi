@@ -2,6 +2,9 @@ import os
 import glob
 
 
+"""
+Not using because we need one file per annotation
+"""
 labels_dir = "../../data/artifacts/labels"
 tagged_labels_dir = "../../data/artifacts/newlabels"
 tagged_dir = "../../data/artifacts/tagging/0"

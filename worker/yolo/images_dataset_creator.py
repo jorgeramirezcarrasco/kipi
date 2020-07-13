@@ -7,12 +7,14 @@ import sys
 vidcap = cv2.VideoCapture('../../data/artifacts/videos/tienda.mp4')
 success,image = vidcap.read()
 count = 0
+classes=2
 while success:
-  cv2.imwrite("../../data/artifacts/images/frame%d.jpg" % count, image)     # save frame as JPEG file      
-  success,image = vidcap.read()
-  count += 1
-  if count>100:
-      break
+        for class_id in range(classes):
+                cv2.imwrite(f"../../data/artifacts/images/{class_id}_frame{count}.jpg", image)     # save frame as JPEG file      
+        success,image = vidcap.read()
+        count += 1
+        if count>100:
+                break
 
 current_dir = "../../data/artifacts/images"
 split_pct = 10;
