@@ -2,7 +2,6 @@
 
 Business image analyzer with the purpose of tracking good practices in work using artificial intelligence.
 
-
 ## Installation
 
 For tagging we need tkinter: https://www.activestate.com/products/tcl/downloads/
