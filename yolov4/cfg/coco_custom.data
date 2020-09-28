@@ -1,6 +1,6 @@
 classes=2
-train=../../data/artifacts/train.txt
-valid=../../data/artifacts/val.txt
+train=../data/artifacts/train.txt
+valid=../data/artifacts/val.txt
 names=cfg/coco_custom.names
 backup=backup/
 

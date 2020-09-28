@@ -118,7 +118,7 @@ class LabelTool():
 
     def loadDir(self, dbg = False):
 
-        self.imageDir = os.path.join('../../data/artifacts/tagging', str(self.imgclass))
+        self.imageDir = os.path.join('../data/artifacts/tagging', str(self.imgclass))
         print(self.imageDir)
         self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
         self.imageList = sorted(self.imageList)
@@ -131,7 +131,7 @@ class LabelTool():
         self.total = len(self.imageList)
 
          # set up output dir
-        self.outDir = os.path.join('../../data/artifacts/newlabels', str(self.imgclass))
+        self.outDir = os.path.join('../data/artifacts/newlabels', str(self.imgclass))
         if not os.path.exists(self.outDir):
             os.mkdir(self.outDir)
 
