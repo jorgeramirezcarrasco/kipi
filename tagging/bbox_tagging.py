@@ -118,12 +118,12 @@ class LabelTool():
 
     def loadDir(self, dbg = False):
 
-        self.imageDir = os.path.join('../data/artifacts/tagging', str(self.imgclass))
+        self.imageDir = os.path.join('../data/artifacts/shopfront_tagging', str(self.imgclass))
         print(self.imageDir)
-        self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
+        self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpeg'))
         self.imageList = sorted(self.imageList)
         if len(self.imageList) == 0:
-            print('No .JPG images found in the specified dir!')
+            print('No .JPEG images found in the specified dir!')
             return
 
         # default to the 1st image in the collection
@@ -131,12 +131,12 @@ class LabelTool():
         self.total = len(self.imageList)
 
          # set up output dir
-        self.outDir = os.path.join('../data/artifacts/newlabels', str(self.imgclass))
+        self.outDir = os.path.join('../data/artifacts/shopfront_labels', str(self.imgclass))
         if not os.path.exists(self.outDir):
             os.mkdir(self.outDir)
 
 
-        filelist = glob.glob(os.path.join(self.imageDir, '*.jpg'))
+        filelist = glob.glob(os.path.join(self.imageDir, '*.jpeg'))
         self.tmp = []
         self.egList = []
         #random.shuffle(filelist)
