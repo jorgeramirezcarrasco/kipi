@@ -15,7 +15,7 @@ SIZE = 100, 100
 class LabelTool():
     def __init__(self, master):
         # IMPORTANT here you can select the img class to tag
-        self.imgclass = 1
+        self.imgclass = 0
 
 
         # set up the main frame
