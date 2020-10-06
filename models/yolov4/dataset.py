@@ -418,7 +418,10 @@ def get_image_id(filename:str) -> int:
     https://github.com/google/automl/blob/master/efficientdet/dataset/create_pascal_tfrecord.py#L86
     or refer to the following code (where the filenames are like 'level1_123.jpg')
     """
-    return int(os.path.basename(filename).split(".jpg")[0][-1])
+    if ".jpeg" in filename:
+        return int(os.path.basename(filename).split(".jpeg")[0][-1])
+    else:
+        return int(os.path.basename(filename).split(".jpg")[0][-1])
     """
     >>> lv, no = os.path.splitext(os.path.basename(filename))[0].split("_")
     >>> lv = lv.replace("level", "")

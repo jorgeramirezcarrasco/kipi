@@ -59,7 +59,7 @@ python train.py --model_config_path ./config/yolov3_custom.cfg --data_config_pat
 
 ```bash
 cd yolov4
-python train.py -train_label_path ../data/shopfront/train.txt -val_label_path ../data/shopfront/val.txt -dir /Users/jrc/Desktop/Jorge/Otros/Coding/Kipi/kipi/models/yolov4 -classes 3 -pretrained ./cfg/yolov4.conv.137.pth
+python train.py -train_label_path ../../data/shopfront/train.txt -val_label_path ../../data/shopfront/val.txt -dir /Users/jrc/Desktop/Jorge/Otros/Coding/Kipi/kipi/models/yolov4 -classes 3 -pretrained ./cfg/yolov4.conv.137.pth
 ```
 
 How to update yolo files:
