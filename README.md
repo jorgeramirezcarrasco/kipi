@@ -35,7 +35,7 @@ python -m ipykernel install --user --name=venv
 In a different terminal
 
 ```bash
-jupyter lab
+jupyter-lab
 ```
 
 To check jupyter kernel list
@@ -67,6 +67,13 @@ How to update yolo files:
 - change classes in [yolo] (3 times)
 - change filters before [yolo] (3 times)
 - filters = (classes + 5) x 3
+
+## Running the tests
+
+```
+python -m unittest discover -s tests
+
+```
 
 ## References:
 
