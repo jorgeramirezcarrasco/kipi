@@ -75,6 +75,28 @@ python -m unittest discover -s tests
 
 ```
 
+## Lambda Function with Zappa
+
+Remember to have the credentials in ~/.aws/credentials
+
+Deploy
+
+```bash
+zappa deploy dev
+```
+
+Update
+
+```bash
+zappa update dev
+```
+
+Delete
+
+```bash
+zappa undeploy dev
+```
+
 ## References:
 
 - https://towardsdatascience.com/training-yolo-for-object-detection-in-pytorch-with-your-custom-dataset-the-simple-way-1aa6f56cf7d9
