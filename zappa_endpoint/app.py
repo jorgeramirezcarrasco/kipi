@@ -10,6 +10,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import date
 from datetime import datetime
+from datetime import timedelta
 import os
 import boto3
 
@@ -50,7 +51,7 @@ def send_email(status,shop="GrMlgElPalmeral"):
     msg = MIMEMultipart()
     msg['From'] = os.environ['EMAIL_SENDER']
     msg['To'] = os.environ['EMAIL_RECEIVER']
-    msg['Subject'] = f"Apertura de la tienda {date.today()}"
+    msg['Subject'] = f"Apertura de la tienda {date.today()+ timedelta(hours=1)}"
 
     msg.attach(MIMEText(f"La tienda {shop} está {status} a las {datetime.now()}", 'plain'))
 
