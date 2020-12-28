@@ -51,7 +51,7 @@ def send_email(status,shop="GrMlgElPalmeral"):
     msg = MIMEMultipart()
     msg['From'] = os.environ['EMAIL_SENDER']
     msg['To'] = os.environ['EMAIL_RECEIVER']
-    msg['Subject'] = f"Apertura de la tienda {date.today()}"
+    msg['Subject'] = f"Apertura/Cierre de la tienda {shop} {date.today()}"
 
     msg.attach(MIMEText(f"La tienda {shop} está {status} a las {str(datetime.now()+ timedelta(hours=1))}", 'plain'))
 
