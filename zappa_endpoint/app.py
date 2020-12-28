@@ -51,9 +51,9 @@ def send_email(status,shop="GrMlgElPalmeral"):
     msg = MIMEMultipart()
     msg['From'] = os.environ['EMAIL_SENDER']
     msg['To'] = os.environ['EMAIL_RECEIVER']
-    msg['Subject'] = f"Apertura de la tienda {date.today()+ timedelta(hours=1)}"
+    msg['Subject'] = f"Apertura de la tienda {date.today()}"
 
-    msg.attach(MIMEText(f"La tienda {shop} está {status} a las {datetime.now()}", 'plain'))
+    msg.attach(MIMEText(f"La tienda {shop} está {status} a las {str(datetime.now()+ timedelta(hours=1))}", 'plain'))
 
     mail.send_message(msg)
     mail.quit()
@@ -129,7 +129,7 @@ def check_is_open():
         send_email_flag = True
     if send_email_flag:
         send_email(label)
-    return Response(json.dumps({"status":label}),  mimetype='application/json')
+    return Response(json.dumps({"status":label,"date":str(datetime.now()+ timedelta(hours=1))}),  mimetype='application/json')
 
 if __name__ == "__main__":
     app.run()
