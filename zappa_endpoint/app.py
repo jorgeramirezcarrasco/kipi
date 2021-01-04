@@ -126,7 +126,8 @@ def check_is_open():
         label = "open"
     if check_status() != label:
         update_status(label)
-        send_email_flag = True
+        if datetime.now().hour < 12:
+            send_email_flag = True
     if send_email_flag:
         send_email(label)
     return Response(json.dumps({"status":label,"date":str(datetime.now()+ timedelta(hours=1))}),  mimetype='application/json')
